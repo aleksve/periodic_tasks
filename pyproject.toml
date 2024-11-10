@@ -1,0 +1,28 @@
+[project]
+name = "periodic_tasks"
+version = "0.1.0"
+description = "Single-thread interval scheduler"
+readme = { file = "README.md", content-type = "text/markdown" }
+authors = [{ name = "Aleksander Veksler", email = "aleksve@gmail.com" }]
+license = { text = "MIT" }
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+dependencies = []
+
+[project.urls]
+"Bug Tracker" = "https://github.com/aleksve/periodic_tasks/issues"
+homepage = "https://github.com/aleksve/periodic_tasks"
+
+[tool.setuptools]
+package-dir = {"" = "periodic_tasks"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["periodic_tasks"]
+
+[tool.setuptools.package-data]
+"periodic_tasks" = ["py.typed"]
