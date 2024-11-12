@@ -1,6 +1,6 @@
 [project]
 name = "periodic_tasks"
-version = "0.1.0"
+version = "0.1.1"
 description = "Single-thread interval scheduler"
 readme = { file = "README.md", content-type = "text/markdown" }
 authors = [{ name = "Aleksander Veksler", email = "aleksve@gmail.com" }]
@@ -18,11 +18,8 @@ dependencies = []
 homepage = "https://github.com/aleksve/periodic_tasks"
 
 [tool.setuptools]
-package-dir = {"" = "periodic_tasks"}
 include-package-data = true
-
-[tool.setuptools.packages.find]
-where = ["periodic_tasks"]
+packages = ["periodic_tasks"]
 
 [tool.setuptools.package-data]
 "periodic_tasks" = ["py.typed"]
