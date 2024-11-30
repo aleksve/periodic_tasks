@@ -35,9 +35,11 @@ def periodic(interval: float | timedelta) -> Callable[[Callable], Callable]:
     """
     Decorator syntax
     :return:
+
+    :raises: TypeError
     """
     if not isinstance(interval, timedelta):
-        # Raises TypeError
+        # Raises TypeError here if the interval cannot be converted to timedelta
         interval = timedelta(seconds=interval)
 
     return partial(make_periodic, interval=interval)
