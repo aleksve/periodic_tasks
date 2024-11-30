@@ -1,5 +1,5 @@
 
-# Periodic Task Scheduling Package Review
+# Periodic Task Scheduler
 
 This package provides a lightweight single-threaded framework for scheduling and executing periodic tasks with precision. Its minimalist syntax and focused functionality make it well-suited for business-critical applications that require reliable task execution at fixed intervals.
 
