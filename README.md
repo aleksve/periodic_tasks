@@ -1,7 +1,7 @@
 
 # Periodic Task Scheduling Package Review
 
-This package provides a lightweight framework for scheduling and executing periodic tasks with precision. Its minimalist syntax and focused functionality make it well-suited for business-critical applications that require reliable task execution at fixed intervals.
+This package provides a lightweight single-threaded framework for scheduling and executing periodic tasks with precision. Its minimalist syntax and focused functionality make it well-suited for business-critical applications that require reliable task execution at fixed intervals.
 
 ## Key Features
 1. **Minimalist Design**: The package avoids unnecessary complexity, focusing on a clear and concise interface for defining and managing periodic tasks.
@@ -55,4 +55,4 @@ In this example:
 - `task_3` is scheduled with `make_periodic`, allowing custom parameters using `functools.partial`.
 - `run_loop` initiates the loop that manages the task execution, handling missed executions without delay accumulation.
 
-Overall, this framework offers robust, no-frills functionality for time-sensitive applications, and its approach to task scheduling is both efficient and effective.
+Overall, this framework offers robust functionality for time-sensitive applications, and its approach to task scheduling is both efficient and effective.
