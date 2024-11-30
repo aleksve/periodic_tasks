@@ -2,7 +2,8 @@ from datetime import timedelta
 from functools import partial
 from threading import Event
 from time import monotonic
-from typing import Callable
+
+from typing import Callable, Optional
 
 
 class _Task:
@@ -58,7 +59,7 @@ def run_pending():
 
 
 def run_loop(
-    stop_event: Event | None = None,
+    stop_event: Optional[Event]  = None,
     return_after: float | timedelta | None = float("inf"),
 ):
     """
