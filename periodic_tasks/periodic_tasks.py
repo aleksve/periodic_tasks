@@ -1,4 +1,3 @@
-
 from datetime import timedelta
 from functools import partial
 import threading
@@ -62,7 +61,7 @@ def run_pending():
 
 
 def run_loop(
-    stop_event: Optional[threading.Event]  = None,
+    stop_event: Optional[threading.Event] = None,
     return_after: float | timedelta | None = float("inf"),
 ):
     """
@@ -78,7 +77,9 @@ def run_loop(
     if stop_event is None:
         stop_event = threading.Event()
     assert isinstance(stop_event, threading.Event)
-    assert threading.current_thread() == threading.main_thread(), "Multithreading is not supported"
+    assert (
+        threading.current_thread() == threading.main_thread()
+    ), "Multithreading is not supported"
     start_time = monotonic()
     if isinstance(return_after, timedelta):
         # timedelta doesn't support float('inf')

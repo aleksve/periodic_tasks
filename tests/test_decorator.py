@@ -16,6 +16,7 @@ def test_example():
         print(f"Started a _fast_ task at t={dt:.3f}")
         if dt > 3:
             stop_event.set()
+
     @periodic(interval=timedelta(seconds=0.5))
     def task_2():
         dt = time.time() - start_time

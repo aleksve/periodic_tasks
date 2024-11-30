@@ -8,6 +8,7 @@ from periodic_tasks import make_periodic, run_loop, reset
 
 _t_0_set_event_after = None
 
+
 def set_event_after(t: float, event: Event):
     global _t_0_set_event_after
     if _t_0_set_event_after is None:
